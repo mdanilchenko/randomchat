@@ -21,7 +21,7 @@ html,body{
     display: inline-block;
     height: 110%;
     vertical-align: middle;
-    margin-right: -0.25em; /* Adjusts for spacing */
+    margin-right: -0.25em;
 }
 .main_area h1{
     height:10%;

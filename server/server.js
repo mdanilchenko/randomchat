@@ -43,7 +43,7 @@ var config = {
 }
 
 //Vars for user management
-var usersList = {}; // Structure: UserId:{status:String,chatId:String,con:Connection}
+var usersList = {};
 
 readProjectSettings();  //Reading settings file
 evalClusterStart();     //Starting servers in local cluster
@@ -51,7 +51,6 @@ evalClusterStart();     //Starting servers in local cluster
 
 //Evaling events made by clients
 function serverCallBack(con) {
-
     con.on("text", function (str) {
         jsonParse(str, function (err, json) {
             if (err) {
