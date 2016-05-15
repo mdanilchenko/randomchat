@@ -1,0 +1,94 @@
+html,body{
+    margin:0px;
+    padding:0px;
+    min-height:480px;
+    height:100%;
+    overflow:hidden;
+}
+.main_area{
+    position:relative;
+    width:90%;
+    height:90%;
+    margin-top:3%;
+    margin-left:5%;
+    overflow:hidden;
+    background:#5e5e5e;
+    border-radius:30px;
+    padding:0px;
+}
+.main_area h1:before {
+    content: '';
+    display: inline-block;
+    height: 110%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+}
+.main_area h1{
+    height:10%;
+    line-heigh:100%;
+    color:#FFFFFF;
+    padding-left:40px;
+    margin:0px;
+}
+.messages_area{
+    position:relative;
+    height:80%;
+    margin:0px 5px;
+    background: #FFFFFF;
+    border-radius:20px;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+.controlls_area{
+    position:relative;
+    height:10%;
+}
+.button_left,.button_right,.msg_area{
+    height:100%;
+}
+.button_left,.button_right{
+    border:1px solid #5e5e5e;
+    background:#5e5e5e;
+    color:#FFFFFF;
+    font-size:1.2em;
+}
+textarea.msg_area{
+    resize: none;
+    outline-width: 0;
+    outline: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+}
+textarea:focus{
+    outline-width: 0;
+    outline: none;
+}
+.label{
+    font-size:12px;
+    margin: 2px 2px 2px 25px;
+
+}
+.label.you{
+    background: #5e5e5e;
+    color:#FFFFFF;
+    border-radius: 5px;
+
+}
+.label.system{
+    background: #eea236;
+    color:#FFFFFF;
+    border-radius: 5px;
+
+}
+.label.stranger{
+    background: #d43f3a;
+    color:#FFFFFF;
+    border-radius: 5px;
+}
+.mesg_text{
+    text-align: left;
+    word-wrap: break-word;
+}

@@ -1,0 +1,16 @@
+{
+  "server":{
+    "host":"192.168.10.10",
+    "port": 61010,
+    "threads":1,
+    "isSecure":false,
+    "wssKey":null,
+    "wssCert":null
+  },
+  "redis":{
+    "host":"127.0.0.1",
+    "port":6379,
+    "database":0,
+    "password":null
+  }
+}

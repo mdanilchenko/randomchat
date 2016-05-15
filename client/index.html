@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, inicial-scale=1"/>
+    <title>Simple Chat</title>
+    <link href="styles/bootstrap.min.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="styles/styles.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="js/angular.js"></script>
+    <script src="js/angular_websocket.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body ng-app="app">
+    <div id="main_controller" class="main_area container" ng-controller="MessagesController as msc">
+        <h1>Simple Chat</h1>
+        <div class="messages_area" align="center">
+            <div  class="msg row" ng-repeat = "message in MsgHd.collection">
+                <div class="label col-xs-1" ng-class="{'system': message.from == 'system', 'you': message.from == 'you', 'stranger':message.from == 'stranger'}">{{message.from}}</div>
+                <div class="mesg_text col-xs-10">{{message.text}}</div>
+            </div>
+        </div>
+        <div class="controlls_area row">
+            <button id="action_btn" class="button_left col-xs-3" ng-click="msc.evalStart()">Start</button>
+            <textarea id="msg" ng-model="m.curMessage" class="msg_area col-xs-6" disabled="disabled" ct-enter="msc.evalEnterPress()"></textarea>
+            <button id="send_btn"  class="button_right col-xs-3" ng-click="msc.evalSend()">Send</button>
+        </div>
+    </div>
+</body>
+</html>
+
